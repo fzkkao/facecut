@@ -1,0 +1,37 @@
+2023-12-09 15:09:34,299 file.manager INFO 2.0.1
+2023-12-09 15:09:34,299 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 15:09:34,299 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-12-09 15:09:34,299 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 15:09:34,299 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-12-09 15:09:34,299 file.manager INFO   All right reserved.
+2023-12-09 15:09:34,299 file.manager INFO Manager starting.
+2023-12-09 15:09:34,299 file.manager INFO Starting local logging.
+2023-12-09 15:09:38,405 file.manager.namingmanager INFO NameServer connection failed: corba/localhost
+2023-12-09 15:09:42,483 file.ManagerServant INFO Master manager not found
+2023-12-09 15:09:42,484 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-12-09 15:09:42,492 file.manager INFO Component type conf file: cam_image_out.conf loaded.
+2023-12-09 15:09:42,493 file.ec_base INFO setRate(1000000.000000) done
+2023-12-09 15:09:42,493 file.ec_base INFO setRate(1000.000000) done
+2023-12-09 15:09:42,493 file.rtobject INFO 1 execution context was created.
+2023-12-09 15:09:42,494 file.rtobject INFO Initial active configuration set is default.
+2023-12-09 15:09:56,628 file.manager.namingmanager INFO NameServer connection failed: corba/localhost
+2023-12-09 15:10:00,693 file.ManagerServant INFO Master manager not found
+2023-12-09 15:10:06,687 file.manager.namingmanager INFO NameServer connection failed: corba/localhost
+2023-12-09 15:10:10,749 file.ManagerServant INFO Master manager not found
+2023-12-09 15:10:16,720 file.manager.namingmanager INFO NameServer connection failed: corba/localhost
+2023-12-09 15:10:20,797 file.ManagerServant INFO Master manager not found
+2023-12-09 15:10:26,782 file.manager.namingmanager INFO NameServer connection failed: corba/localhost
+2023-12-09 15:10:30,855 file.ManagerServant INFO Master manager not found
+2023-12-09 15:10:32,781 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-12-09 15:10:32,781 file.manager.namingmanager INFO Connected to a name server: corba/localhost
+2023-12-09 15:10:36,866 file.ManagerServant INFO Master manager not found
+2023-12-09 15:10:46,879 file.ManagerServant INFO Master manager not found
+2023-12-09 15:10:56,895 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:06,891 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:16,899 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:26,900 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:37,044 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:38,462 file.ec_base WARNING The component is not responding.
+2023-12-09 15:11:38,462 file.ec_base ERROR Unknown error: Invalid state transition.
+2023-12-09 15:11:47,036 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:57,150 file.ManagerServant INFO Master manager not found

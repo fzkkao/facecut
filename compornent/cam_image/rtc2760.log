@@ -1,0 +1,22 @@
+2023-11-25 14:22:33,828 file.manager INFO 2.0.1
+2023-11-25 14:22:33,828 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-11-25 14:22:33,829 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-11-25 14:22:33,829 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-11-25 14:22:33,829 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-11-25 14:22:33,829 file.manager INFO   All right reserved.
+2023-11-25 14:22:33,829 file.manager INFO Manager starting.
+2023-11-25 14:22:33,829 file.manager INFO Starting local logging.
+2023-11-25 14:22:33,837 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-11-25 14:22:37,949 file.ManagerServant INFO Master manager not found
+2023-11-25 14:22:37,950 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-11-25 14:22:37,953 file.manager INFO Component type conf file: cam_image_out.conf loaded.
+2023-11-25 14:22:37,954 file.ec_base INFO setRate(1000000.000000) done
+2023-11-25 14:22:37,954 file.ec_base INFO setRate(1000.000000) done
+2023-11-25 14:22:37,954 file.rtobject INFO 1 execution context was created.
+2023-11-25 14:22:37,955 file.rtobject INFO Initial active configuration set is default.
+2023-11-25 14:22:52,151 file.ManagerServant INFO Master manager not found
+2023-11-25 14:23:02,194 file.ManagerServant INFO Master manager not found
+2023-11-25 14:23:04,228 file.ec_base WARNING The component is not responding.
+2023-11-25 14:23:04,229 file.ec_base ERROR Unknown error: Invalid state transition.
+2023-11-25 14:23:12,243 file.ManagerServant INFO Master manager not found
+2023-11-25 14:23:22,319 file.ManagerServant INFO Master manager not found

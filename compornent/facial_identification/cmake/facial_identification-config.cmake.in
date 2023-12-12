@@ -1,0 +1,54 @@
+# facial_identification CMake config file
+#
+# This file sets the following variables:
+# facial_identification_FOUND - Always TRUE.
+# facial_identification_INCLUDE_DIRS - Directories containing the facial_identification include files.
+# facial_identification_IDL_DIRS - Directories containing the facial_identification IDL files.
+# facial_identification_LIBRARIES - Libraries needed to use facial_identification.
+# facial_identification_DEFINITIONS - Compiler flags for facial_identification.
+# facial_identification_VERSION - The version of facial_identification found.
+# facial_identification_VERSION_MAJOR - The major version of facial_identification found.
+# facial_identification_VERSION_MINOR - The minor version of facial_identification found.
+# facial_identification_VERSION_REVISION - The revision version of facial_identification found.
+# facial_identification_VERSION_CANDIDATE - The candidate version of facial_identification found.
+
+message(STATUS "Found facial_identification-@PROJECT_VERSION@")
+set(facial_identification_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(facial_identification_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(facial_identification_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(facial_identification_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(facial_identification_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(facial_identification_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(facial_identification_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(facial_identification_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(facial_identification_VERSION @PROJECT_VERSION@)
+set(facial_identification_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(facial_identification_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(facial_identification_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(facial_identification_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+

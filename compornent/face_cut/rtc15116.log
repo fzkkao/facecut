@@ -1,0 +1,25 @@
+2023-12-09 22:00:45,428 file.manager INFO 2.0.1
+2023-12-09 22:00:45,428 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 22:00:45,428 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-12-09 22:00:45,428 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 22:00:45,428 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-12-09 22:00:45,428 file.manager INFO   All right reserved.
+2023-12-09 22:00:45,428 file.manager INFO Manager starting.
+2023-12-09 22:00:45,429 file.manager INFO Starting local logging.
+2023-12-09 22:00:45,434 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-12-09 22:00:49,495 file.ManagerServant INFO Master manager not found
+2023-12-09 22:00:49,496 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-12-09 22:00:49,498 file.manager INFO Component type conf file: face_cut.conf loaded.
+2023-12-09 22:00:49,499 file.ec_base INFO setRate(1000000.000000) done
+2023-12-09 22:00:49,499 file.ec_base INFO setRate(1000.000000) done
+2023-12-09 22:00:49,499 file.rtobject INFO 1 execution context was created.
+2023-12-09 22:00:49,500 file.rtobject INFO Initial active configuration set is default.
+2023-12-09 22:01:03,603 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:13,594 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:15,070 file.SdoServiceAdmin WARNING No available SDO service in the factory: 
+2023-12-09 22:01:15,070 file.SdoServiceAdmin ERROR type  not exists.
+2023-12-09 22:01:23,652 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:33,721 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:43,782 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:53,847 file.ManagerServant INFO Master manager not found
+2023-12-09 22:02:03,851 file.ManagerServant INFO Master manager not found

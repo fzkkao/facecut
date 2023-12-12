@@ -1,0 +1,54 @@
+# notification CMake config file
+#
+# This file sets the following variables:
+# notification_FOUND - Always TRUE.
+# notification_INCLUDE_DIRS - Directories containing the notification include files.
+# notification_IDL_DIRS - Directories containing the notification IDL files.
+# notification_LIBRARIES - Libraries needed to use notification.
+# notification_DEFINITIONS - Compiler flags for notification.
+# notification_VERSION - The version of notification found.
+# notification_VERSION_MAJOR - The major version of notification found.
+# notification_VERSION_MINOR - The minor version of notification found.
+# notification_VERSION_REVISION - The revision version of notification found.
+# notification_VERSION_CANDIDATE - The candidate version of notification found.
+
+message(STATUS "Found notification-@PROJECT_VERSION@")
+set(notification_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(notification_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(notification_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(notification_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(notification_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(notification_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(notification_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(notification_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(notification_VERSION @PROJECT_VERSION@)
+set(notification_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(notification_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(notification_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(notification_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+

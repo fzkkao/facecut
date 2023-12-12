@@ -1,0 +1,26 @@
+2023-11-21 18:09:30,311 file.manager INFO 2.0.1
+2023-11-21 18:09:30,311 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-11-21 18:09:30,311 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-11-21 18:09:30,311 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-11-21 18:09:30,311 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-11-21 18:09:30,311 file.manager INFO   All right reserved.
+2023-11-21 18:09:30,311 file.manager INFO Manager starting.
+2023-11-21 18:09:30,311 file.manager INFO Starting local logging.
+2023-11-21 18:09:30,317 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-11-21 18:09:34,415 file.ManagerServant INFO Master manager not found
+2023-11-21 18:09:34,416 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-11-21 18:09:34,418 file.manager INFO Component type conf file: face_cut.conf loaded.
+2023-11-21 18:09:34,419 file.ec_base INFO setRate(1000000.000000) done
+2023-11-21 18:09:34,419 file.ec_base INFO setRate(1000.000000) done
+2023-11-21 18:09:34,419 file.rtobject INFO 1 execution context was created.
+2023-11-21 18:09:34,420 file.rtobject INFO Initial active configuration set is default.
+2023-11-21 18:09:48,379 file.rtobject ERROR Traceback (most recent call last):
+  File "C:\Users\tbou3\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenRTM_aist\DataFlowComponentBase.py", line 123, in on_execute
+    ret = self.onExecute(ec_id)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tbou3\workspace\face_cut\face_cut.py", line 230, in onExecute
+    frame = cv2.imread("face_" + int(image_num) + ".jpg")
+                       ~~~~~~~~^~~~~~~~~~~~~~~~
+TypeError: can only concatenate str (not "int") to str
+
+2023-11-21 18:09:48,591 file.ManagerServant INFO Master manager not found

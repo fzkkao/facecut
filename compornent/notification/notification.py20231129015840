@@ -1,0 +1,337 @@
+﻿#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# -*- Python -*-
+
+# <rtc-template block="description">
+"""
+ @file notification.py
+ @brief ModuleDescription
+ @date $Date$
+
+
+"""
+# </rtc-template>
+
+import sys
+import time
+sys.path.append(".")
+
+# Import RTM module
+import RTC
+import OpenRTM_aist
+
+#other-import
+import csv
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
+
+
+
+# Import Service implementation class
+# <rtc-template block="service_impl">
+
+# </rtc-template>
+
+# Import Service stub modules
+# <rtc-template block="consumer_import">
+# </rtc-template>
+
+
+# This module's spesification
+# <rtc-template block="module_spec">
+notification_spec = ["implementation_id", "notification", 
+         "type_name",         "notification", 
+         "description",       "ModuleDescription", 
+         "version",           "1.0.0", 
+         "vendor",            "VenderName", 
+         "category",          "Category", 
+         "activity_type",     "STATIC", 
+         "max_instance",      "1", 
+         "language",          "Python", 
+         "lang_type",         "SCRIPT",
+         ""]
+# </rtc-template>
+
+# <rtc-template block="component_description">
+##
+# @class notification
+# @brief ModuleDescription
+# 
+# 
+# </rtc-template>
+class notification(OpenRTM_aist.DataFlowComponentBase):
+	
+    ##
+    # @brief constructor
+    # @param manager Maneger Object
+    # 
+    def __init__(self, manager):
+        OpenRTM_aist.DataFlowComponentBase.__init__(self, manager)
+
+        self._d_student_number_in = OpenRTM_aist.instantiateDataType(RTC.TimedWString)
+        """
+        """
+        self._student_number_inIn = OpenRTM_aist.InPort("student_number_in", self._d_student_number_in)
+
+
+		
+
+
+        # initialize of configuration-data.
+        # <rtc-template block="init_conf_param">
+		
+        # </rtc-template>
+
+
+		 
+    ##
+    #
+    # The initialize action (on CREATED->ALIVE transition)
+    # 
+    # @return RTC::ReturnCode_t
+    # 
+    #
+    def onInitialize(self):
+        # Bind variables and configuration variable
+		
+        # Set InPort buffers
+        self.addInPort("student_number_in",self._student_number_inIn)
+		
+        # Set OutPort buffers
+		
+        # Set service provider to Ports
+		
+        # Set service consumers to Ports
+		
+        # Set CORBA Service Ports
+		
+        return RTC.RTC_OK
+	
+    ###
+    ## 
+    ## The finalize action (on ALIVE->END transition)
+    ## 
+    ## @return RTC::ReturnCode_t
+    #
+    ## 
+    #def onFinalize(self):
+    #
+
+    #    return RTC.RTC_OK
+	
+    ###
+    ##
+    ## The startup action when ExecutionContext startup
+    ## 
+    ## @param ec_id target ExecutionContext Id
+    ##
+    ## @return RTC::ReturnCode_t
+    ##
+    ##
+    #def onStartup(self, ec_id):
+    #
+    #    return RTC.RTC_OK
+	
+    ###
+    ##
+    ## The shutdown action when ExecutionContext stop
+    ##
+    ## @param ec_id target ExecutionContext Id
+    ##
+    ## @return RTC::ReturnCode_t
+    ##
+    ##
+    #def onShutdown(self, ec_id):
+    #
+    #    return RTC.RTC_OK
+	
+    ##
+    #
+    # The activated action (Active state entry action)
+    #
+    # @param ec_id target ExecutionContext Id
+    # 
+    # @return RTC::ReturnCode_t
+    #
+    #
+    def onActivated(self, ec_id):
+        self.GMAIL = 'z19160z7@shibaurafzk.com' # 上記でパスワードを発行したアカウントアドレスを記入
+        self.PASSWORD = 'wmrb yzjs ypgy tqdh'
+        self.management_room_email = "tbou30897@gmai.com"
+    
+        return RTC.RTC_OK
+	
+    ###
+    ##
+    ## The deactivated action (Active state exit action)
+    ##
+    ## @param ec_id target ExecutionContext Id
+    ##
+    ## @return RTC::ReturnCode_t
+    ##
+    ##
+    #def onDeactivated(self, ec_id):
+    #
+    #    return RTC.RTC_OK
+	
+    ##
+    #
+    # The execution action that is invoked periodically
+    #
+    # @param ec_id target ExecutionContext Id
+    #
+    # @return RTC::ReturnCode_t
+    #
+    #
+    def find_email(self,student_number):
+        file_path = 'st_num.csv'  # CSVファイルのパスを指定
+        with open(file_path, newline='') as csvfile:
+            reader = csv.reader(csvfile)
+            for row in reader:
+                if row[0] == student_number:
+                    return row[2]
+        return "メールアドレスが見つかりませんでした。"
+
+
+    def setup_mail(self,subject, mail_to, mail_body):
+        message = MIMEMultipart()
+        message["subject"] = subject
+        message["To"] = mail_to
+        message["From"] = "z19160z7@shibaurafzk.com"
+        message.attach(MIMEText(mail_body, "html"))
+        return message
+
+
+    def send_mail(self,message):
+        account = "z19160z7@shibaurafzk.com"
+        password = "wmrb yzjs ypgy tqdh"
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login(self.GMAIL, self.PASSWORD)
+        server.send_message(message)
+        server.quit()
+    
+
+    def onExecute(self, ec_id):
+        if self._student_number_inIn.isNew(): #新しいデータが来たか確認
+            self._d_student_number_in = self._student_number_inIn.read() #値を読み込む
+            student_data =  self._d_student_number_in.data    
+
+            mail_to = self.find_email(student_data[0])
+
+            #現在時刻を取得
+
+            if mail_to == "メールアドレスが見つかりませんでした。":
+                message = self.setup_mail("非登録の生徒に関する連絡", self.management_room_email, student_data[0] + "は登録されていない生徒番号です。")#登録されていない生徒がいた場合に、事務局に連絡
+                self.send_mail(message)
+            elif student_data[1] == "遅刻":
+                message = self.setup_mail("生徒の遅刻に関する連絡", mail_to, f"学籍番号{student_data[0]}さんの遅刻を連絡します。")#subjectが件名,mailtoが宛先,mainbodyが本文
+                self.send_mail(message)
+            else:
+                message = self.setup_mail("生徒の登校に関する連絡", mail_to, f"学籍番号{student_data[0]}さんのが登校しました。")#subjectが件名,mailtoが宛先,mainbodyが本文
+                self.send_mail(message)
+    
+        return RTC.RTC_OK
+	
+    ###
+    ##
+    ## The aborting action when main logic error occurred.
+    ##
+    ## @param ec_id target ExecutionContext Id
+    ##
+    ## @return RTC::ReturnCode_t
+    ##
+    ##
+    #def onAborting(self, ec_id):
+    #
+    #    return RTC.RTC_OK
+	
+    ###
+    ##
+    ## The error action in ERROR state
+    ##
+    ## @param ec_id target ExecutionContext Id
+    ##
+    ## @return RTC::ReturnCode_t
+    ##
+    ##
+    #def onError(self, ec_id):
+    #
+    #    return RTC.RTC_OK
+	
+    ###
+    ##
+    ## The reset action that is invoked resetting
+    ##
+    ## @param ec_id target ExecutionContext Id
+    ##
+    ## @return RTC::ReturnCode_t
+    ##
+    ##
+    #def onReset(self, ec_id):
+    #
+    #    return RTC.RTC_OK
+	
+    ###
+    ##
+    ## The state update action that is invoked after onExecute() action
+    ##
+    ## @param ec_id target ExecutionContext Id
+    ##
+    ## @return RTC::ReturnCode_t
+    ##
+
+    ##
+    #def onStateUpdate(self, ec_id):
+    #
+    #    return RTC.RTC_OK
+	
+    ###
+    ##
+    ## The action that is invoked when execution context's rate is changed
+    ##
+    ## @param ec_id target ExecutionContext Id
+    ##
+    ## @return RTC::ReturnCode_t
+    ##
+    ##
+    #def onRateChanged(self, ec_id):
+    #
+    #    return RTC.RTC_OK
+	
+
+
+
+def notificationInit(manager):
+    profile = OpenRTM_aist.Properties(defaults_str=notification_spec)
+    manager.registerFactory(profile,
+                            notification,
+                            OpenRTM_aist.Delete)
+
+def MyModuleInit(manager):
+    notificationInit(manager)
+
+    # create instance_name option for createComponent()
+    instance_name = [i for i in sys.argv if "--instance_name=" in i]
+    if instance_name:
+        args = instance_name[0].replace("--", "?")
+    else:
+        args = ""
+  
+    # Create a component
+    comp = manager.createComponent("notification" + args)
+
+def main():
+    # remove --instance_name= option
+    argv = [i for i in sys.argv if not "--instance_name=" in i]
+    # Initialize manager
+    mgr = OpenRTM_aist.Manager.init(sys.argv)
+    mgr.setModuleInitProc(MyModuleInit)
+    mgr.activateManager()
+    mgr.runManager()
+
+if __name__ == "__main__":
+    main()
+

@@ -1,0 +1,54 @@
+# present_time CMake config file
+#
+# This file sets the following variables:
+# present_time_FOUND - Always TRUE.
+# present_time_INCLUDE_DIRS - Directories containing the present_time include files.
+# present_time_IDL_DIRS - Directories containing the present_time IDL files.
+# present_time_LIBRARIES - Libraries needed to use present_time.
+# present_time_DEFINITIONS - Compiler flags for present_time.
+# present_time_VERSION - The version of present_time found.
+# present_time_VERSION_MAJOR - The major version of present_time found.
+# present_time_VERSION_MINOR - The minor version of present_time found.
+# present_time_VERSION_REVISION - The revision version of present_time found.
+# present_time_VERSION_CANDIDATE - The candidate version of present_time found.
+
+message(STATUS "Found present_time-@PROJECT_VERSION@")
+set(present_time_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(present_time_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(present_time_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(present_time_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(present_time_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(present_time_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(present_time_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(present_time_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(present_time_VERSION @PROJECT_VERSION@)
+set(present_time_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(present_time_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(present_time_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(present_time_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+

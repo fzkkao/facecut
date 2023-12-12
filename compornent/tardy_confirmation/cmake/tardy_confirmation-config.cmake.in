@@ -1,0 +1,54 @@
+# tardy_confirmation CMake config file
+#
+# This file sets the following variables:
+# tardy_confirmation_FOUND - Always TRUE.
+# tardy_confirmation_INCLUDE_DIRS - Directories containing the tardy_confirmation include files.
+# tardy_confirmation_IDL_DIRS - Directories containing the tardy_confirmation IDL files.
+# tardy_confirmation_LIBRARIES - Libraries needed to use tardy_confirmation.
+# tardy_confirmation_DEFINITIONS - Compiler flags for tardy_confirmation.
+# tardy_confirmation_VERSION - The version of tardy_confirmation found.
+# tardy_confirmation_VERSION_MAJOR - The major version of tardy_confirmation found.
+# tardy_confirmation_VERSION_MINOR - The minor version of tardy_confirmation found.
+# tardy_confirmation_VERSION_REVISION - The revision version of tardy_confirmation found.
+# tardy_confirmation_VERSION_CANDIDATE - The candidate version of tardy_confirmation found.
+
+message(STATUS "Found tardy_confirmation-@PROJECT_VERSION@")
+set(tardy_confirmation_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(tardy_confirmation_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(tardy_confirmation_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(tardy_confirmation_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(tardy_confirmation_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(tardy_confirmation_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(tardy_confirmation_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(tardy_confirmation_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(tardy_confirmation_VERSION @PROJECT_VERSION@)
+set(tardy_confirmation_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(tardy_confirmation_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(tardy_confirmation_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(tardy_confirmation_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+

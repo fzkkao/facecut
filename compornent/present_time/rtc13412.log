@@ -1,0 +1,21 @@
+2023-12-09 21:53:32,967 file.manager INFO 2.0.1
+2023-12-09 21:53:32,967 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 21:53:32,967 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-12-09 21:53:32,967 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 21:53:32,967 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-12-09 21:53:32,967 file.manager INFO   All right reserved.
+2023-12-09 21:53:32,967 file.manager INFO Manager starting.
+2023-12-09 21:53:32,967 file.manager INFO Starting local logging.
+2023-12-09 21:53:32,973 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-12-09 21:53:37,067 file.ManagerServant INFO Master manager not found
+2023-12-09 21:53:37,068 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-12-09 21:53:37,070 file.manager INFO Component type conf file: present_time.conf loaded.
+2023-12-09 21:53:37,070 file.ec_base INFO setRate(1000000.000000) done
+2023-12-09 21:53:37,071 file.ec_base INFO setRate(1000.000000) done
+2023-12-09 21:53:37,071 file.rtobject INFO 1 execution context was created.
+2023-12-09 21:53:37,071 file.rtobject INFO Initial active configuration set is default.
+2023-12-09 21:53:51,219 file.ManagerServant INFO Master manager not found
+2023-12-09 21:53:52,760 file.SdoServiceAdmin WARNING No available SDO service in the factory: 
+2023-12-09 21:53:52,760 file.SdoServiceAdmin ERROR type  not exists.
+2023-12-09 21:54:01,249 file.ManagerServant INFO Master manager not found
+2023-12-09 21:54:11,256 file.ManagerServant INFO Master manager not found
