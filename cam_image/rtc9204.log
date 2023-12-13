@@ -1,0 +1,28 @@
+2023-12-09 22:00:41,152 file.manager INFO 2.0.1
+2023-12-09 22:00:41,152 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 22:00:41,152 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-12-09 22:00:41,152 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 22:00:41,152 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-12-09 22:00:41,152 file.manager INFO   All right reserved.
+2023-12-09 22:00:41,152 file.manager INFO Manager starting.
+2023-12-09 22:00:41,152 file.manager INFO Starting local logging.
+2023-12-09 22:00:41,157 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-12-09 22:00:45,204 file.ManagerServant INFO Master manager not found
+2023-12-09 22:00:45,205 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-12-09 22:00:45,207 file.manager INFO Component type conf file: cam_image_out.conf loaded.
+2023-12-09 22:00:45,208 file.ec_base INFO setRate(1000000.000000) done
+2023-12-09 22:00:45,208 file.ec_base INFO setRate(1000.000000) done
+2023-12-09 22:00:45,209 file.rtobject INFO 1 execution context was created.
+2023-12-09 22:00:45,209 file.rtobject INFO Initial active configuration set is default.
+2023-12-09 22:00:59,296 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:09,389 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:19,290 file.SdoServiceAdmin WARNING No available SDO service in the factory: 
+2023-12-09 22:01:19,290 file.SdoServiceAdmin ERROR type  not exists.
+2023-12-09 22:01:19,466 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:29,527 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:39,612 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:49,712 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:53,693 file.ec_base WARNING The component is not responding.
+2023-12-09 22:01:53,693 file.ec_base ERROR Unknown error: Invalid state transition.
+2023-12-09 22:01:59,796 file.ManagerServant INFO Master manager not found
+2023-12-09 22:02:09,857 file.ManagerServant INFO Master manager not found

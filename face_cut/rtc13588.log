@@ -1,0 +1,75 @@
+2023-12-09 15:09:58,204 file.manager INFO 2.0.1
+2023-12-09 15:09:58,204 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 15:09:58,204 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-12-09 15:09:58,204 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 15:09:58,205 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-12-09 15:09:58,205 file.manager INFO   All right reserved.
+2023-12-09 15:09:58,205 file.manager INFO Manager starting.
+2023-12-09 15:09:58,205 file.manager INFO Starting local logging.
+2023-12-09 15:10:02,287 file.manager.namingmanager INFO NameServer connection failed: corba/localhost
+2023-12-09 15:10:06,364 file.ManagerServant INFO Master manager not found
+2023-12-09 15:10:06,365 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-12-09 15:10:06,372 file.manager INFO Component type conf file: face_cut.conf loaded.
+2023-12-09 15:10:06,374 file.ec_base INFO setRate(1000000.000000) done
+2023-12-09 15:10:06,374 file.ec_base INFO setRate(1000.000000) done
+2023-12-09 15:10:06,374 file.rtobject INFO 1 execution context was created.
+2023-12-09 15:10:06,374 file.rtobject INFO Initial active configuration set is default.
+2023-12-09 15:10:20,504 file.manager.namingmanager INFO NameServer connection failed: corba/localhost
+2023-12-09 15:10:24,603 file.ManagerServant INFO Master manager not found
+2023-12-09 15:10:27,542 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-12-09 15:10:27,542 file.manager.namingmanager INFO Connected to a name server: corba/localhost
+2023-12-09 15:10:31,641 file.ManagerServant INFO Master manager not found
+2023-12-09 15:10:40,648 file.ManagerServant INFO Master manager not found
+2023-12-09 15:10:50,667 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:00,668 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:10,672 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:20,697 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:30,692 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:40,791 file.ManagerServant INFO Master manager not found
+2023-12-09 15:11:50,814 file.ManagerServant INFO Master manager not found
+2023-12-09 15:12:00,835 file.ManagerServant INFO Master manager not found
+2023-12-09 15:12:04,779 file.image_in WARNING Traceback (most recent call last):
+  File "C:\Users\tbou3\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenRTM_aist\PortBase.py", line 2305, in checkPorts
+    if port._non_existent():
+       ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tbou3\AppData\Local\Programs\Python\Python311\Lib\site-packages\omniORB\CORBA.py", line 559, in _non_existent
+    return self._obj.nonExistent()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+omniORB.CORBA._omni_sys_exc: CORBA.TRANSIENT(omniORB.TRANSIENT_ConnectFailed, CORBA.COMPLETED_NO)
+
+2023-12-09 15:12:04,779 file.image_in WARNING Dead connection: aeb9db61-9659-11ee-8d47-ea35b921a255
+2023-12-09 15:12:08,883 file.image_in WARNING Traceback (most recent call last):
+  File "C:\Users\tbou3\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenRTM_aist\PortBase.py", line 873, in disconnect
+    return p.notify_disconnect(connector_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tbou3\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenRTM_aist\RTM_IDL\RTC_idl.py", line 1207, in notify_disconnect
+    return self._obj.invoke("notify_disconnect", _0_RTC.PortService._d_notify_disconnect, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+omniORB.CORBA._omni_sys_exc: CORBA.TRANSIENT(omniORB.TRANSIENT_ConnectFailed, CORBA.COMPLETED_NO)
+
+2023-12-09 15:12:10,851 file.ManagerServant INFO Master manager not found
+2023-12-09 15:12:12,969 file.image_out WARNING Traceback (most recent call last):
+  File "C:\Users\tbou3\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenRTM_aist\PortBase.py", line 2305, in checkPorts
+    if port._non_existent():
+       ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tbou3\AppData\Local\Programs\Python\Python311\Lib\site-packages\omniORB\CORBA.py", line 559, in _non_existent
+    return self._obj.nonExistent()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+omniORB.CORBA._omni_sys_exc: CORBA.TRANSIENT(omniORB.TRANSIENT_ConnectFailed, CORBA.COMPLETED_NO)
+
+2023-12-09 15:12:12,969 file.image_out WARNING Dead connection: b063bd7a-9659-11ee-8a8a-ea35b921a255
+2023-12-09 15:12:17,044 file.image_out WARNING Traceback (most recent call last):
+  File "C:\Users\tbou3\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenRTM_aist\PortBase.py", line 1664, in disconnectNext
+    return p.notify_disconnect(connector_profile.connector_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tbou3\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenRTM_aist\RTM_IDL\RTC_idl.py", line 1207, in notify_disconnect
+    return self._obj.invoke("notify_disconnect", _0_RTC.PortService._d_notify_disconnect, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+omniORB.CORBA._omni_sys_exc: CORBA.TRANSIENT(omniORB.TRANSIENT_ConnectFailed, CORBA.COMPLETED_NO)
+
+2023-12-09 15:12:20,872 file.ManagerServant INFO Master manager not found
+2023-12-09 15:12:30,875 file.ManagerServant INFO Master manager not found
+2023-12-09 15:12:40,881 file.ManagerServant INFO Master manager not found
+2023-12-09 15:12:50,905 file.ManagerServant INFO Master manager not found
+2023-12-09 15:13:00,925 file.ManagerServant INFO Master manager not found
+2023-12-09 15:13:10,941 file.ManagerServant INFO Master manager not found

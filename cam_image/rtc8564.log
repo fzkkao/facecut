@@ -1,0 +1,22 @@
+2023-11-25 14:50:28,510 file.manager INFO 2.0.1
+2023-11-25 14:50:28,511 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-11-25 14:50:28,511 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-11-25 14:50:28,511 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-11-25 14:50:28,511 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-11-25 14:50:28,511 file.manager INFO   All right reserved.
+2023-11-25 14:50:28,511 file.manager INFO Manager starting.
+2023-11-25 14:50:28,512 file.manager INFO Starting local logging.
+2023-11-25 14:50:28,545 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-11-25 14:50:32,701 file.ManagerServant INFO Master manager not found
+2023-11-25 14:50:32,706 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-11-25 14:50:32,721 file.manager INFO Component type conf file: cam_image_out.conf loaded.
+2023-11-25 14:50:32,729 file.ec_base INFO setRate(1000000.000000) done
+2023-11-25 14:50:32,730 file.ec_base INFO setRate(1000.000000) done
+2023-11-25 14:50:32,732 file.rtobject INFO 1 execution context was created.
+2023-11-25 14:50:32,736 file.rtobject INFO Initial active configuration set is default.
+2023-11-25 14:50:46,919 file.ManagerServant INFO Master manager not found
+2023-11-25 14:50:56,993 file.ManagerServant INFO Master manager not found
+2023-11-25 14:51:07,069 file.ManagerServant INFO Master manager not found
+2023-11-25 14:51:17,147 file.ManagerServant INFO Master manager not found
+2023-11-25 14:51:27,240 file.ManagerServant INFO Master manager not found
+2023-11-25 14:51:37,301 file.ManagerServant INFO Master manager not found

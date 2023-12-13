@@ -1,0 +1,35 @@
+2023-11-21 18:07:26,906 file.manager INFO 2.0.1
+2023-11-21 18:07:26,906 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-11-21 18:07:26,906 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-11-21 18:07:26,906 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-11-21 18:07:26,906 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-11-21 18:07:26,906 file.manager INFO   All right reserved.
+2023-11-21 18:07:26,906 file.manager INFO Manager starting.
+2023-11-21 18:07:26,906 file.manager INFO Starting local logging.
+2023-11-21 18:07:26,912 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-11-21 18:07:30,999 file.ManagerServant INFO Master manager not found
+2023-11-21 18:07:31,000 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-11-21 18:07:31,002 file.manager INFO Component type conf file: face_cut.conf loaded.
+2023-11-21 18:07:31,002 file.ec_base INFO setRate(1000000.000000) done
+2023-11-21 18:07:31,002 file.ec_base INFO setRate(1000.000000) done
+2023-11-21 18:07:31,002 file.rtobject INFO 1 execution context was created.
+2023-11-21 18:07:31,003 file.rtobject INFO Initial active configuration set is default.
+2023-11-21 18:07:45,197 file.ManagerServant INFO Master manager not found
+2023-11-21 18:07:52,410 file.rtobject ERROR Traceback (most recent call last):
+  File "C:\Users\tbou3\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenRTM_aist\DataFlowComponentBase.py", line 123, in on_execute
+    ret = self.onExecute(ec_id)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tbou3\workspace\face_cut\face_cut.py", line 225, in onExecute
+    saved_count = self.crop_faces(frame)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: face_cut.crop_faces() missing 2 required positional arguments: 'write_path' and 'padding'
+
+2023-11-21 18:07:55,224 file.ManagerServant INFO Master manager not found
+2023-11-21 18:08:05,260 file.ManagerServant INFO Master manager not found
+2023-11-21 18:08:15,292 file.ManagerServant INFO Master manager not found
+2023-11-21 18:08:25,308 file.ManagerServant INFO Master manager not found
+2023-11-21 18:08:35,361 file.ManagerServant INFO Master manager not found
+2023-11-21 18:08:45,403 file.ManagerServant INFO Master manager not found
+2023-11-21 18:08:55,424 file.ManagerServant INFO Master manager not found
+2023-11-21 18:09:05,469 file.ManagerServant INFO Master manager not found
+2023-11-21 18:09:15,486 file.ManagerServant INFO Master manager not found

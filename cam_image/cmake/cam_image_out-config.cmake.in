@@ -1,0 +1,54 @@
+# cam_image_out CMake config file
+#
+# This file sets the following variables:
+# cam_image_out_FOUND - Always TRUE.
+# cam_image_out_INCLUDE_DIRS - Directories containing the cam_image_out include files.
+# cam_image_out_IDL_DIRS - Directories containing the cam_image_out IDL files.
+# cam_image_out_LIBRARIES - Libraries needed to use cam_image_out.
+# cam_image_out_DEFINITIONS - Compiler flags for cam_image_out.
+# cam_image_out_VERSION - The version of cam_image_out found.
+# cam_image_out_VERSION_MAJOR - The major version of cam_image_out found.
+# cam_image_out_VERSION_MINOR - The minor version of cam_image_out found.
+# cam_image_out_VERSION_REVISION - The revision version of cam_image_out found.
+# cam_image_out_VERSION_CANDIDATE - The candidate version of cam_image_out found.
+
+message(STATUS "Found cam_image_out-@PROJECT_VERSION@")
+set(cam_image_out_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(cam_image_out_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(cam_image_out_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(cam_image_out_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(cam_image_out_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(cam_image_out_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(cam_image_out_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(cam_image_out_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(cam_image_out_VERSION @PROJECT_VERSION@)
+set(cam_image_out_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(cam_image_out_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(cam_image_out_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(cam_image_out_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+

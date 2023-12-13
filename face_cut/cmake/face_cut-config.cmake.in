@@ -1,0 +1,54 @@
+# face_cut CMake config file
+#
+# This file sets the following variables:
+# face_cut_FOUND - Always TRUE.
+# face_cut_INCLUDE_DIRS - Directories containing the face_cut include files.
+# face_cut_IDL_DIRS - Directories containing the face_cut IDL files.
+# face_cut_LIBRARIES - Libraries needed to use face_cut.
+# face_cut_DEFINITIONS - Compiler flags for face_cut.
+# face_cut_VERSION - The version of face_cut found.
+# face_cut_VERSION_MAJOR - The major version of face_cut found.
+# face_cut_VERSION_MINOR - The minor version of face_cut found.
+# face_cut_VERSION_REVISION - The revision version of face_cut found.
+# face_cut_VERSION_CANDIDATE - The candidate version of face_cut found.
+
+message(STATUS "Found face_cut-@PROJECT_VERSION@")
+set(face_cut_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(face_cut_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(face_cut_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(face_cut_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(face_cut_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(face_cut_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(face_cut_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(face_cut_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(face_cut_VERSION @PROJECT_VERSION@)
+set(face_cut_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(face_cut_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(face_cut_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(face_cut_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+

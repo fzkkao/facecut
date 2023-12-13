@@ -1,0 +1,44 @@
+2023-12-09 15:23:58,593 file.manager INFO 2.0.1
+2023-12-09 15:23:58,593 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 15:23:58,593 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-12-09 15:23:58,593 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 15:23:58,593 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-12-09 15:23:58,593 file.manager INFO   All right reserved.
+2023-12-09 15:23:58,593 file.manager INFO Manager starting.
+2023-12-09 15:23:58,593 file.manager INFO Starting local logging.
+2023-12-09 15:23:58,598 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-12-09 15:24:02,679 file.ManagerServant INFO Master manager not found
+2023-12-09 15:24:02,680 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-12-09 15:24:02,682 file.manager INFO Component type conf file: cam_image_out.conf loaded.
+2023-12-09 15:24:02,683 file.ec_base INFO setRate(1000000.000000) done
+2023-12-09 15:24:02,683 file.ec_base INFO setRate(1000.000000) done
+2023-12-09 15:24:02,683 file.rtobject INFO 1 execution context was created.
+2023-12-09 15:24:02,684 file.rtobject INFO Initial active configuration set is default.
+2023-12-09 15:24:16,801 file.ManagerServant INFO Master manager not found
+2023-12-09 15:24:26,908 file.ManagerServant INFO Master manager not found
+2023-12-09 15:24:36,910 file.ManagerServant INFO Master manager not found
+2023-12-09 15:24:46,914 file.ManagerServant INFO Master manager not found
+2023-12-09 15:24:56,946 file.ManagerServant INFO Master manager not found
+2023-12-09 15:25:06,966 file.ManagerServant INFO Master manager not found
+2023-12-09 15:25:16,990 file.ManagerServant INFO Master manager not found
+2023-12-09 15:25:27,030 file.ManagerServant INFO Master manager not found
+2023-12-09 15:25:37,060 file.ManagerServant INFO Master manager not found
+2023-12-09 15:25:47,061 file.ManagerServant INFO Master manager not found
+2023-12-09 15:25:57,079 file.ManagerServant INFO Master manager not found
+2023-12-09 15:26:07,077 file.ManagerServant INFO Master manager not found
+2023-12-09 15:26:17,197 file.ManagerServant INFO Master manager not found
+2023-12-09 15:26:27,220 file.ManagerServant INFO Master manager not found
+2023-12-09 15:26:37,228 file.ManagerServant INFO Master manager not found
+2023-12-09 15:26:47,262 file.ManagerServant INFO Master manager not found
+2023-12-09 15:26:57,276 file.ManagerServant INFO Master manager not found
+2023-12-09 15:27:07,283 file.ManagerServant INFO Master manager not found
+2023-12-09 15:27:17,285 file.ManagerServant INFO Master manager not found
+2023-12-09 15:27:27,318 file.ManagerServant INFO Master manager not found
+2023-12-09 15:27:37,313 file.ManagerServant INFO Master manager not found
+2023-12-09 15:27:47,435 file.ManagerServant INFO Master manager not found
+2023-12-09 15:27:57,460 file.ManagerServant INFO Master manager not found
+2023-12-09 15:28:04,596 file.ec_base WARNING The component is not responding.
+2023-12-09 15:28:04,596 file.ec_base ERROR Unknown error: Invalid state transition.
+2023-12-09 15:28:07,462 file.ManagerServant INFO Master manager not found
+2023-12-09 15:28:17,595 file.ManagerServant INFO Master manager not found
+2023-12-09 15:28:27,597 file.ManagerServant INFO Master manager not found

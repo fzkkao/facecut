@@ -1,0 +1,21 @@
+2023-12-09 22:01:03,755 file.manager INFO 2.0.1
+2023-12-09 22:01:03,755 file.manager INFO Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 22:01:03,755 file.manager INFO   Intelligent Systems Research Institute, AIST,
+2023-12-09 22:01:03,755 file.manager INFO Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+2023-12-09 22:01:03,755 file.manager INFO   Industrial Cyber-Physical Research Center, AIST,
+2023-12-09 22:01:03,755 file.manager INFO   All right reserved.
+2023-12-09 22:01:03,755 file.manager INFO Manager starting.
+2023-12-09 22:01:03,755 file.manager INFO Starting local logging.
+2023-12-09 22:01:03,763 file.manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2023-12-09 22:01:07,834 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:07,835 file.LocalServiceAdmin INFO All the local services are enabled.
+2023-12-09 22:01:07,838 file.manager INFO Component type conf file: facial_identification.conf loaded.
+2023-12-09 22:01:07,839 file.ec_base INFO setRate(1000000.000000) done
+2023-12-09 22:01:07,839 file.ec_base INFO setRate(1000.000000) done
+2023-12-09 22:01:07,839 file.rtobject INFO 1 execution context was created.
+2023-12-09 22:01:07,840 file.rtobject INFO Initial active configuration set is default.
+2023-12-09 22:01:21,930 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:32,006 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:42,068 file.ManagerServant INFO Master manager not found
+2023-12-09 22:01:52,162 file.ManagerServant INFO Master manager not found
+2023-12-09 22:02:02,319 file.ManagerServant INFO Master manager not found
